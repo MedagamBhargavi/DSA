@@ -10,12 +10,12 @@ public class EleAppearingOnce{
         }
         HashMap<Integer,Integer> map = new  HashMap<>();
         for(int num : arr){
-            map.put(num,1);
+            map.put(num,map.getOrDefault(num,0)+1);
         }
        
        for (int num : arr) {
           if(map.get(num)==1){
-             System.out.println(num);                   // o/p: 1,3,4,5
+             System.out.print(num+" ");                   // o/p: 1,3,4,5
           }
        }
         
